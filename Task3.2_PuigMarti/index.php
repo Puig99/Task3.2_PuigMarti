@@ -18,18 +18,34 @@
   <div class="row">
 
   <?php 
-        for ( $contador=1; $contador<=100; $contador++){
+        for ( $contador=1; $contador<=10; $contador++){
             
             ?>
-        <div class="card">
-            <h5 class="card-header"> <?php echo $contador ?> </h5>
-                <div class="card-body"> 
-                    <p> hey </p>
+        <div class="card col-sm-6">
+            <h5 class="card-header"> <?= $contador ?> </h5>
+                <div class="card-body">
+
+                <?php
+
+                for ($divisor=1; $divisor<=$contador; $divisor++){
+                    if($contador!=1){
+                        $residu=$contador%$divisor;
+                        if($residu==0){
+                            if($contador!==$divisor || $divisor!==1){
+                            $resultado=$contador/$divisor; ?>
+                            <p> <?= $resultado ?> </p>
+                        <?php
+                        }
+                    }
+                    }
+                }
+                        ?>
+                </div> 
                 </div>
-        </div>
-  <?php   
-    }
-        ?>
+            <?php
+                }
+                ?>
+
   </div>
   </div>
       

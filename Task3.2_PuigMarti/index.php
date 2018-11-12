@@ -18,8 +18,8 @@
   <div class="row">
 
   <?php 
-        for($contador <=100, $contador++){
-            $contador=1
+        for ( $contador=1; $contador<=100; $contador++){
+            
             ?>
         <div class="card">
             <h5 class="card-header"> <?php echo $contador ?> </h5>

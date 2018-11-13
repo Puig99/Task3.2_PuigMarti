@@ -18,7 +18,7 @@
   <div class="row">
 
   <?php 
-        for ( $contador=1; $contador<=10; $contador++){
+        for ( $contador=1; $contador<=100; $contador++){
             
             ?>
         <div class="card col-sm-6">
@@ -26,19 +26,36 @@
                 <div class="card-body">
 
                 <?php
-
+                   
                 for ($divisor=1; $divisor<=$contador; $divisor++){
+                    $cadena='';
                     if($contador!=1){
+
                         $residu=$contador%$divisor;
+
                         if($residu==0){
-                            if($contador!==$divisor || $divisor!==1){
-                            $resultado=$contador/$divisor; ?>
-                            <p> <?= $resultado ?> </p>
+
+                            if($contador!==$divisor ){
+
+                                if($divisor!==1){
+
+                                    $resultado=$contador/$divisor; ?>
+
+                                <?php $cadena=$cadena.$resultado.' '   ; ?> 
                         <?php
                         }
                     }
+                    
+                    }
+                    if($cadena!==''){ 
+                        echo $cadena;
+
                     }
                 }
+                else {echo $cadena;}
+                }
+                
+                
                         ?>
                 </div> 
                 </div>

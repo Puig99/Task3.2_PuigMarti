@@ -11,6 +11,8 @@
 ---
 ## Task 
 
+We had to show in the screen the first 100 natural numbers, each number had to have its own card and their divider under it. The numbers that didn't have any dividers had to show the words "Prime number" under them.
+
 
 ---
 ## Requirements

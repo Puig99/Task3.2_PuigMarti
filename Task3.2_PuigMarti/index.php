@@ -26,7 +26,7 @@
                 <div class="card-body">
 
                 <?php
-                   
+                $primo=true;
                 for ($divisor=1; $divisor<=$contador; $divisor++){
                     $cadena='';
                     if($contador!=1){
@@ -41,7 +41,10 @@
 
                                     $resultado=$contador/$divisor; ?>
 
-                                <?php $cadena=$cadena.$resultado.' '   ; ?> 
+                                <?php 
+                                    $cadena=$cadena.$resultado.' '   ; 
+                                    $primo=false;
+                                ?> 
                         <?php
                         }
                     }
@@ -49,12 +52,15 @@
                     }
                     if($cadena!==''){ 
                         echo $cadena;
-
+                        
                     }
                 }
-                else {echo $cadena;}
-                }
-                
+            
+            }
+            
+            if($primo){
+                echo 'PRIME NUMBER';
+            }
                 
                         ?>
                 </div> 
